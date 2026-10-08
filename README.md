@@ -22,7 +22,7 @@ projects/<name>/        One project page per paper
 - **Paper thumbnail:** save an image to `assets/img/pubs/` and set `thumb: "assets/img/pubs/<file>.png"`.
 - **Add code link:** in the paper's `links`, replace `codeSoon: true` with `code: "https://github.com/..."`.
 - **News:** edit the `<table class="news">` in `index.html`.
-- **Profile photo:** save as `assets/img/profile.jpg`, then follow the comment in `index.html`.
+- **Profile photo:** replace `assets/img/profile.jpg` (square, ~640px).
 - **New project page:** copy `projects/glaucoma-fairness/` to `projects/<new-name>/` and edit; link it via `website:` in `pubs.js`.
 - **Photography:** put photos in `assets/img/photos/` and list them in `assets/js/photos.js`; set `GALLERY_LINK` there to link an outside album.
 - **Update CV:** replace `Ahsan_Habib_Akash_CV.pdf` (keep the same file name).

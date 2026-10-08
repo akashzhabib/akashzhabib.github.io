@@ -59,7 +59,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .about p { margin: 0 0 14px; }
 .profile-card { text-align: left; }
 .profile-photo {
-  width: 100%; aspect-ratio: 1/1; border-radius: 12px; background: linear-gradient(135deg, #002855, #1f5fa8);
+  width: 100%; height: auto; aspect-ratio: 1/1; border-radius: 12px; background: linear-gradient(135deg, #002855, #1f5fa8);
   display: grid; place-items: center; color: #fff; font-family: var(--serif); font-size: 64px; font-weight: 600;
   box-shadow: 0 6px 20px rgba(0,40,85,.15); object-fit: cover;
 }
