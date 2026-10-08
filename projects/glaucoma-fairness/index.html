@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Label-free Debiasing for Glaucoma VLMs · MICCAI 2025</title>
+  <meta name="description" content="Addressing bias in vision–language models for glaucoma detection without protected attribute supervision. DEMI Workshop, MICCAI 2025.">
+  <meta property="og:title" content="Addressing Bias in VLMs for Glaucoma Detection Without Protected Attribute Supervision">
+  <meta property="og:description" content="Label-free bias mitigation for medical VLMs · DEMI @ MICCAI 2025">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23002855'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EAH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/project.css">
+</head>
+<body>
+
+<nav class="pnav">
+  <div class="wrap">
+    <a class="home" href="../../">← Ahsan Habib Akash</a>
+    <span class="sec-links" style="display:contents">
+      <a href="#overview">Overview</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#bibtex">BibTeX</a>
+    </span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 style="margin-top:0">Addressing Bias in VLMs for Glaucoma Detection<br>Without Protected Attribute Supervision</h1>
+    <p class="authors">
+      <span><a class="me" href="../../">Ahsan Habib Akash</a><sup>1</sup></span>
+      <span>Greg Murray<sup>1</sup></span>
+      <span>Annahita Amireskandari<sup>1</sup></span>
+      <span>Joel Palko<sup>1</sup></span>
+      <span>Carol Laxson<sup>1</sup></span>
+      <span>Binod Bhattarai<sup>2,3,4</sup></span>
+      <span>Prashnna K. Gyawali<sup>1</sup></span>
+    </p>
+    <!-- TODO: confirm clinical co-authors' affiliations (assumed WVU) -->
+    <p class="affils"><span><sup>1</sup>West Virginia University</span><span><sup>2</sup>University of Aberdeen, UK</span><span><sup>3</sup>Fogsphere (Redev.AI Ltd), UK</span><span><sup>4</sup>University College London, UK</span></p>
+    <div class="venue">DEMI Workshop · MICCAI 2025</div>
+    <div class="btns">
+      <a href="https://arxiv.org/pdf/2508.09087" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Paper</a>
+      <a href="https://arxiv.org/abs/2508.09087" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>arXiv</a>
+      <span class="soon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>Code — coming soon</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="narrow">
+    <div class="tldr"><b class="tag">TL;DR</b>Vision–language models for glaucoma screening can be unfair across demographic groups even when race or sex is never used in training. We mitigate this <strong>without any protected-attribute labels</strong>: cluster image embeddings to infer proxy subgroups, then up-weight the clusters the model handles worst during contrastive training.</div>
+  </div>
+
+  <section id="overview">
+    <h2>Motivation</h2>
+    <div class="narrow">
+      <p>Glaucoma is a leading cause of irreversible blindness and disproportionately affects underserved populations. Automated screening from retinal fundus images with CLIP-style VLMs is promising, but these models can encode demographic bias. Most debiasing methods need protected-attribute labels, which are often missing, incomplete, or restricted in clinical data.</p>
+      <div class="todo fig">Teaser figure goes here — save as <code>projects/glaucoma-fairness/teaser.png</code>.</div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2>Method</h2>
+    <div class="narrow">
+      <p>We build on a reweighting contrastive-learning framework with three components:</p>
+      <div class="cards">
+        <div class="card"><div class="k">Step 1</div><div class="t">Proxy subgroups</div><p>Cluster image embeddings to infer latent subgroups, replacing protected-attribute labels.</p></div>
+        <div class="card"><div class="k">Step 2</div><div class="t">Gradient-balanced losses</div><p>Use gradient similarity to balance a CLIP-style image–text loss with a SimCLR-style image–image loss.</p></div>
+        <div class="card"><div class="k">Step 3</div><div class="t">Top-k reweighting</div><p>A top-k weighted objective puts more weight on the worst-performing clusters.</p></div>
+      </div>
+      <div class="todo fig">Method diagram goes here.</div>
+    </div>
+  </section>
+
+  <section id="results">
+    <h2>Results</h2>
+    <div class="narrow">
+      <p>We evaluate on the glaucoma subset of <strong>Harvard FairVLMed</strong> using Equalized Odds Distance (EOD), Equalized Subgroup AUC (ES-AUC), and Groupwise AUC.</p>
+      <div class="todo">Add the main results table or figure and one sentence on the headline improvement.</div>
+    </div>
+  </section>
+
+  <section id="bibtex">
+    <h2>BibTeX</h2>
+    <div class="narrow bibbox">
+      <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('bib').innerText).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})">Copy</button>
+<pre id="bib">@inproceedings{akash2025addressing,
+  title     = {Addressing Bias in VLMs for Glaucoma Detection Without Protected Attribute Supervision},
+  author    = {Akash, Ahsan Habib and Murray, Greg and Amireskandari, Annahita and Palko, Joel and Laxson, Carol and Bhattarai, Binod and Gyawali, Prashnna},
+  booktitle = {3rd Workshop on Data Engineering in Medical Imaging (DEMI), MICCAI},
+  year      = {2025},
+  eprint    = {2508.09087},
+  archivePrefix = {arXiv}
+}</pre>
+    </div>
+  </section>
+</main>
+
+<footer class="pfooter">© 2026 Ahsan Habib Akash · <a href="../../">Home</a></footer>
+</body>
+</html>

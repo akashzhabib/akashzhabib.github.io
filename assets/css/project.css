@@ -1,0 +1,85 @@
+/* ===== Paper project pages (light theme) ===== */
+:root {
+  --bg: #ffffff; --bg-soft: #f6f8fb; --text: #1f2328; --muted: #59636e; --faint: #8b949e;
+  --rule: #e4e8ee; --accent: #002855; --accent-2: #1f5fa8; --gold: #b8860b;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "Source Serif 4", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16.5px/1.7 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 780px; margin: 0 auto; }
+
+/* Sticky section nav */
+.pnav { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.93); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+.pnav .wrap { display: flex; align-items: center; gap: 18px; height: 50px; font-size: 14px; overflow-x: auto; }
+.pnav .home { font-weight: 600; color: var(--text); margin-right: auto; white-space: nowrap; }
+.pnav a:not(.home) { color: var(--muted); white-space: nowrap; }
+.pnav a:not(.home):hover { color: var(--accent); text-decoration: none; }
+@media (max-width: 640px) { .pnav .sec-links { display: none; } }
+
+/* Hero */
+.hero { text-align: center; padding: 60px 0 30px; background: linear-gradient(180deg, #f3f6fb 0%, #fff 100%); border-bottom: 1px solid var(--rule); }
+.hero .acronym { font-size: clamp(40px, 7vw, 64px); font-weight: 800; letter-spacing: -.02em; color: var(--accent); margin: 0; line-height: 1.05; }
+.hero h1 { font-size: clamp(22px, 3.4vw, 32px); font-weight: 700; line-height: 1.3; margin: 12px auto 18px; max-width: 860px; }
+.hero .authors { font-size: 17px; margin: 0 0 6px; }
+.hero .authors span { white-space: nowrap; margin: 0 6px; }
+.hero .authors .me { font-weight: 600; }
+.hero sup { color: var(--muted); font-size: 11px; margin-left: 1px; }
+.hero .affils { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+.hero .affils span { margin: 0 8px; white-space: nowrap; }
+.hero .venue { display: inline-block; font-weight: 700; color: var(--gold); background: #fdf6e3; border: 1px solid #f1e2b6; padding: 4px 14px; border-radius: 999px; font-size: 15px; margin-bottom: 22px; }
+.hero .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.hero .btns a, .hero .btns span {
+  display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 999px; font-size: 15px; font-weight: 500;
+  background: #1f2328; color: #fff;
+}
+.hero .btns a:hover { background: var(--accent); text-decoration: none; }
+.hero .btns .soon { background: #fff; color: var(--faint); border: 1px dashed #c9ced4; }
+.hero .btns svg { width: 16px; height: 16px; }
+
+/* Body sections */
+section { padding: 46px 0 10px; scroll-margin-top: 56px; }
+h2 { font-size: 28px; font-weight: 700; text-align: center; margin: 0 0 18px; }
+h3 { font-size: 19px; margin: 26px 0 8px; }
+p { margin: 0 0 14px; }
+.tldr { background: var(--bg-soft); border: 1px solid var(--rule); border-left: 4px solid var(--accent-2); border-radius: 10px; padding: 16px 20px; font-size: 16.5px; margin-top: 30px; }
+.tldr b.tag { color: var(--accent-2); margin-right: 6px; }
+
+figure { margin: 22px 0; text-align: center; }
+figure img { max-width: 100%; border-radius: 8px; border: 1px solid var(--rule); }
+figcaption { font-size: 14.5px; color: var(--muted); margin-top: 10px; text-align: left; }
+figcaption b { color: var(--text); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+.card { border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; background: #fff; }
+.card .k { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-2); margin-bottom: 4px; }
+.card .t { font-weight: 700; margin-bottom: 4px; }
+.card p { font-size: 15px; color: var(--muted); margin: 0; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 20px 0; }
+.stat { text-align: center; padding: 18px 10px; border-radius: 10px; background: var(--bg-soft); border: 1px solid var(--rule); }
+.stat .n { font-size: 34px; font-weight: 800; color: var(--accent); line-height: 1.1; }
+.stat .l { font-size: 14px; color: var(--muted); margin-top: 4px; }
+
+.levels { list-style: none; padding: 0; margin: 18px 0; counter-reset: lv; }
+.levels li { counter-increment: lv; display: grid; grid-template-columns: 38px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.levels li::before { content: "L" counter(lv); font-weight: 800; color: #fff; background: var(--accent-2); border-radius: 8px; height: 30px; display: grid; place-items: center; font-size: 13px; }
+.levels li:nth-child(2)::before { background: #2a6fb9; } .levels li:nth-child(3)::before { background: #3a7fc6; }
+.levels li:nth-child(4)::before { background: #1c4f8a; } .levels li:nth-child(5)::before { background: #002855; }
+
+/* Placeholder — remove once real content is in */
+.todo { border: 2px dashed #e0b84c; background: #fffbea; color: #7a5b00; border-radius: 10px; padding: 18px 20px; font-size: 14.5px; text-align: center; }
+.todo.fig { aspect-ratio: 16/7; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; }
+
+/* BibTeX */
+.bibbox { position: relative; }
+.bibbox pre { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 10px; padding: 18px 20px; font: 13.5px/1.6 var(--mono); white-space: pre-wrap; word-break: break-word; margin: 0; }
+.bibbox button { position: absolute; top: 10px; right: 10px; font: 600 12px var(--sans); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--rule); background: #fff; cursor: pointer; }
+.bibbox button:hover { border-color: var(--accent); color: var(--accent); }
+
+.pfooter { margin-top: 56px; border-top: 1px solid var(--rule); background: var(--bg-soft); color: var(--faint); font-size: 13px; text-align: center; padding: 20px; }
