@@ -90,15 +90,22 @@ const PUBS = [
     id: "pmb",
     title: "Robust CNN Multi-Nested-LSTM Framework with Compound Loss for Patch-Based Multi-Push Ultrasound Shear Wave Imaging and Segmentation",
     authors: ["Md. Jahin Alam", "Ahsan Habib Akash", "Muyinatu A. Lediju Bell", "Md. Kamrul Hasan"],
-    venue: "Physics in Medicine and Biology, 2024",
-    year: 2024, label: "PMB 2024", color: "#2f7d32", selected: false,
+    venue: "Physics in Medicine & Biology, vol. 71, no. 1, 015030, 2026 · Early Career Researcher Focus Collection 2025",
+    year: 2026, label: "PMB 2026", color: "#2f7d32", selected: false,
     thumb: "assets/img/pubs/pmb.svg",
-    links: {},
-    bibtex: `@article{alam2024robust,
+    tldr: "Two-stage framework: a 3D ResNet encoder with nested CNN–LSTM modules reconstructs elasticity maps from multi-push shear-wave data, then a dual-decoder network denoises them and segments the inclusion.",
+    links: { doi: "https://doi.org/10.1088/1361-6560/ae2db8", arxiv: "https://arxiv.org/abs/2407.20558" },
+    bibtex: `@article{alam2026robust,
   title   = {Robust CNN Multi-Nested-LSTM Framework with Compound Loss for Patch-Based Multi-Push Ultrasound Shear Wave Imaging and Segmentation},
   author  = {Alam, Md. Jahin and Akash, Ahsan Habib and Bell, Muyinatu A. Lediju and Hasan, Md. Kamrul},
-  journal = {Physics in Medicine and Biology},
-  year    = {2024}
+  journal = {Physics in Medicine \& Biology},
+  volume  = {71},
+  number  = {1},
+  pages   = {015030},
+  doi     = {10.1088/1361-6560/ae2db8},
+  eprint  = {2407.20558},
+  archivePrefix = {arXiv},
+  year    = {2026}
 }`
   },
   {
