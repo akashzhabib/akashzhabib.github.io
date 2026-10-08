@@ -23,7 +23,7 @@ const PUBS = [
     authors: ["Ahsan Habib Akash", "Alina Devkota", "Donald A. Adjeroh", "Binod Bhattarai", "Prashnna K. Gyawali"],
     venue: "Advances in Neural Information Processing Systems (NeurIPS), Evaluations & Datasets Track, 2026",
     year: 2026, label: "NeurIPS 2026", color: "#6f42c1", selected: true,
-    thumb: "assets/img/pubs/medtec.svg", note: "Poster",
+    thumb: "assets/img/pubs/medtec.jpg", note: "Poster",
     tldr: "A five-level probing benchmark (domain → modality → anatomy → finding → negation) across 11 VLMs and 6 imaging modalities: specialist models fail even at telling a chest X-ray from everyday objects, and no model handles negation.",
     links: {
       website: "https://machine-intelligence-lab-wvu.github.io/MedTEC-Bench/",

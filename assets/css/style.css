@@ -125,7 +125,7 @@ h2.sec a.more { float: right; font-family: var(--sans); font-size: 13px; font-we
   width: 100%; aspect-ratio: 16/10; border: 1px solid var(--rule); border-top: 0; border-radius: 0 0 6px 6px;
   overflow: hidden; background: var(--bg-soft); display: grid; place-items: center;
 }
-.pub .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pub .thumb img { width: 100%; height: 100%; object-fit: contain; background: #fff; display: block; }
 .pub .thumb .ph { font-family: var(--serif); font-size: 20px; font-weight: 600; color: #b7bec6; text-align: center; padding: 8px; line-height: 1.2; }
 .pub .title { font-weight: 600; font-size: 16.5px; line-height: 1.4; margin: 0 0 4px; color: var(--text); }
 .pub .authors { font-size: 14.5px; color: var(--muted); margin: 0 0 3px; }
