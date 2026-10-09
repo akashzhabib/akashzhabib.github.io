@@ -54,6 +54,26 @@ const PUBS = [
 }`
   },
   {
+    id: "lad",
+    title: "Naming the Concepts Classifiers Rely On: Language-Anchored Decomposition for Faithful Explanation",
+    authors: ["Ahsan Habib Akash", "Dipkamal Bhusal", "Stacey Jones", "Donald A. Adjeroh", "Binod Bhattarai", "Prashnna K. Gyawali"],
+    venue: "arXiv preprint arXiv:2607.07264, 2026",
+    year: 2026, label: "Preprint", color: "#b5179e", selected: true,
+    thumb: "assets/img/pubs/lad.jpg",
+    tldr: "LAD explains a frozen classifier with named concepts: an LLM proposes concept names, CLIP grounds them spatially, and only a concept basis that reconstructs the model’s own activations is learned — no retraining.",
+    links: {
+      website: "https://machine-intelligence-lab-wvu.github.io/LAD/",
+      arxiv: "https://arxiv.org/abs/2607.07264",
+      code: "https://github.com/machine-intelligence-lab-wvu/LAD"
+    },
+    bibtex: `@article{akash2026naming,
+  title   = {Naming the Concepts Classifiers Rely On: Language-Anchored Decomposition for Faithful Explanation},
+  author  = {Akash, Ahsan Habib and Bhusal, Dipkamal and Jones, Stacey and Adjeroh, Donald A. and Bhattarai, Binod and Gyawali, Prashnna Kumar},
+  journal = {arXiv preprint arXiv:2607.07264},
+  year    = {2026}
+}`
+  },
+  {
     id: "glaucoma",
     title: "Addressing Bias in VLMs for Glaucoma Detection Without Protected Attribute Supervision",
     authors: ["Ahsan Habib Akash", "Greg Murray", "Annahita Amireskandari", "Joel Palko", "Carol Laxson", "Binod Bhattarai", "Prashnna K. Gyawali"],
@@ -94,7 +114,7 @@ const PUBS = [
     year: 2026, label: "PMB 2026", color: "#2f7d32", selected: false,
     thumb: "assets/img/pubs/pmb.svg",
     tldr: "Two-stage framework: a 3D ResNet encoder with nested CNN–LSTM modules reconstructs elasticity maps from multi-push shear-wave data, then a dual-decoder network denoises them and segments the inclusion.",
-    links: { doi: "https://doi.org/10.1088/1361-6560/ae2db8", arxiv: "https://arxiv.org/abs/2407.20558" },
+    links: { website: "https://ahsan06080.github.io/SWE-MultiNestedLSTM/", doi: "https://doi.org/10.1088/1361-6560/ae2db8", arxiv: "https://arxiv.org/abs/2407.20558" },
     bibtex: `@article{alam2026robust,
   title   = {Robust CNN Multi-Nested-LSTM Framework with Compound Loss for Patch-Based Multi-Push Ultrasound Shear Wave Imaging and Segmentation},
   author  = {Alam, Md. Jahin and Akash, Ahsan Habib and Bell, Muyinatu A. Lediju and Hasan, Md. Kamrul},
