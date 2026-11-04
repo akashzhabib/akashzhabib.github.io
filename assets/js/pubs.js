@@ -44,7 +44,7 @@ const PUBS = [
     venue: "Advances in Neural Information Processing Systems (NeurIPS), Main Track, 2026",
     year: 2026, label: "NeurIPS 2026", color: "#6f42c1", selected: true,
     thumb: "assets/img/pubs/circa.png", note: "Poster",
-    tldr: "CIRCA combines two complementary intrinsic rewards with targeted KL-Cov regularization, keeping verifier-free RL post-training stable where single-signal rewards collapse.",
+    tldr: "Pairs two complementary intrinsic rewards (cluster voting and self-certainty) with GDPO normalization and KL-Cov regularization, keeping label-free RL post-training of LLMs stable where single-reward RLIF collapses.",
     links: { website: "https://shourovj.github.io/projects-sites/unsupervised-rl/", arxiv: "https://arxiv.org/abs/2605.22620", openreview: "https://openreview.net/forum?id=D8K5QK3kwT", codeSoon: true },
     bibtex: `@inproceedings{joarder2026two,
   title     = {Two is Better than One: A Collapse-free Multi-Reward RLIF Training Framework},
