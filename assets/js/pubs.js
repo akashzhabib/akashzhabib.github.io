@@ -57,8 +57,8 @@ const PUBS = [
     id: "lad",
     title: "Naming the Concepts Classifiers Rely On: Language-Anchored Decomposition for Faithful Explanation",
     authors: ["Ahsan Habib Akash", "Dipkamal Bhusal", "Stacey Jones", "Donald A. Adjeroh", "Binod Bhattarai", "Prashnna K. Gyawali"],
-    venue: "arXiv preprint arXiv:2607.07264, 2026",
-    year: 2026, label: "Preprint", color: "#b5179e", selected: true,
+    venue: "Under review at Transactions on Machine Learning Research (TMLR) · arXiv:2607.07264, 2026",
+    year: 2026, label: "TMLR · Under Review", color: "#b5179e", selected: true,
     thumb: "assets/img/pubs/lad.jpg",
     tldr: "LAD explains a frozen classifier with named concepts: an LLM proposes concept names, CLIP grounds them spatially, and only a concept basis that reconstructs the model’s own activations is learned — no retraining.",
     links: {
